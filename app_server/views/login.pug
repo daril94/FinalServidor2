@@ -1,0 +1,22 @@
+extends layout.pug
+block content
+    .col-md-12.center-block
+        center
+            h1.tituloP= title
+            br
+            br
+    .Sign
+        center
+            // formulario de inicio de sesion
+            form#login(method='post', action='/login-auth')
+                input.text2(type='email', name='Email', placeholder='Email', required='')
+                br
+                input.text2(type='password', name='Password', placeholder='Password', required='')
+                br
+                p
+                    a(href='restore_password') Forgot Password
+                button#send.button(type='submit') Sign In
+                input#newUser.button(type='submit', onclick="location = 'newUser'", value='New User')
+                #mensaje
+
+

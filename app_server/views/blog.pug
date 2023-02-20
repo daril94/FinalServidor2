@@ -1,0 +1,111 @@
+extends layout.pug
+block content
+    // Titulo del blog
+    .col-md-12.center-block
+        center
+             h1#tituloBlog= title
+             br
+             br
+    // Introduccion al blog
+    .container
+        .row
+            .col-md-12
+                header
+                    h2.tituloP
+                        a Arduino Server2 DEP
+                p
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    | incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    | exercitation ullamco laboris nisi ut.
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    | incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    | exercitation ullamco laboris nisi ut.
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    | incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    | exercitation ullamco laboris nisi ut.
+    // Estructura del blog
+    .container
+        .row
+            // Parte Izquierda de la estructura del blog
+            .col-md-9
+
+                    .col-md-6
+                        center
+                            h2
+                                | Ultimos Post
+                            br
+                            br
+                    .col-md-6
+                        center
+                            input#newUser.button(type='submit', onclick="location = 'newPost'", value='Crear Post')
+                        br
+                        br
+                        br
+                    if(data!=null)
+                        each post in data
+                            a(href='')
+                                h3
+                                    |#{post.namePost}
+                            p
+                                 |#{post.descriptionPostMini}
+
+                            p
+                                 img(src=post.imageUrl, height='100%', width='100%')
+                            p.finPost
+                                | Enviado por:#{post.userPost}  - Enviado el: #{post.created}
+                    else
+                        p | no
+
+            // Parte Derecha de la estructura del blog
+            .col-md-3
+                section
+                    p
+                        | Busqueda
+
+                    form(method='GET', action='', style='margin:0px; padding:0px;')
+                        input.text2(type='text', placeholder='Search', name='Search')
+                        input.text2(type='submit', value='Search')
+                        br
+                        br
+                section
+                    p
+                        | Archivos
+                        ul
+                            li
+                                | 2017
+                                ul
+                                    li
+                                        | Agosto
+                                    li
+                                        | Septiembre
+                                    li
+                                        | Octubre
+                                    li
+                                        | Noviembre
+                                    li
+                                        | Diciembre
+                    br
+                    br
+                section
+                    p
+                        | Ultimos Post
+                    p
+                         ul
+                            li
+                                | Circuitos
+                            li
+                                | Trabajo en clase
+                    p
+                    br
+                    br
+                    section
+                        p
+                            | Popular Post
+                            ul
+                                li
+                                    | Circuitos
+                                li
+                                    | Trabajo en clase
+
+
+

@@ -1,0 +1,32 @@
+extends layout.pug
+block content
+    .col-md-12.center-block
+        center
+            h1.tituloP= title
+            br
+            br
+    .Sign
+        center
+            // formulario de nuevo post
+            form#login(method='post', action='/insertarPost')
+                input.text2(type='text', name='namePost', placeholder='Nombre del post', required='')
+                br
+                input.text2(type='text', name='imageUrl', placeholder='direcion de la imagen', required='')
+                br
+                br
+                textarea.text2(name='descriptionPostMini', rows='5', cols='40' required) Comentario corto del post
+                br
+                textarea.text2(name='descriptionPos', rows='10', cols='40' required) Comentario corto del post
+                p
+                input.text2(type='text' name='tags',  placeholder='tag',required)
+                button#send.button(type='submit') Enviar
+
+
+
+
+
+                #mensaje
+
+
+
+

@@ -1,0 +1,16 @@
+{
+  "name": "final-mean-arduino",
+  "version": "0.0.1",
+  "author": "Avila Daril, Camacho Ernesto, Jaramillo Paola",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "latest",
+    "requirejs": "latest",
+    "font-awesome": "latest",
+    "lodash": "latest",
+    "normalize-css": "latest",
+    "bootstrap":"latest",
+    "jquery":"latest"
+
+  }
+}

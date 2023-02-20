@@ -1,0 +1,18 @@
+
+{ "namePost": "Manejo de Luces y Boton (Pulsador)",
+  "userPost":"daril1994",
+  "imageUrl":"images/blog/post1.png",
+  "descriptionPostMini":"descripcion mini ",
+  "descriptionPost": " Descripcion post",
+  "tags": ["arduino", "ledRGB", "Resistor"]
+ }
+
+
+  { "namePost": "Potenciometro",
+    "userPost":"paola2017",
+    "imageUrl":"images/blog/post2.png",
+    "descriptionPostMini":"descripcion mini ",
+    "descriptionPost": " Descripcion post",
+    "tags": ["arduino", "ledRGB", "Resistor"] }
+
+

@@ -1,0 +1,35 @@
+extends layout.pug
+block content
+    // Titulo del blog
+    .col-md-12.center-block
+        center
+             h1#tituloBlog= title
+             br
+             br
+
+    // Estructura del blog
+    .container
+        .row
+            // Parte Izquierda de la estructura del blog
+            .col-md-12
+                center
+                    if(data!=null)
+                        each user in data
+                            table.tablaUsers
+                                tr.tablaUsersT
+                                    th Nombre
+                                    th Nombre de Usuario
+                                    th Email
+                                    th Contraseña
+                                    th Fecha de Creacion
+                                    th Rol
+                                tr.tablaUsersT
+                                    td #{user.name}
+                                    td #{user.userName}
+                                    td #{user.email}
+                                    td #{user.password}
+                                    td #{user.created}
+                                    td #{user.rol}
+                    else
+                        p  no hay usuarios
+

@@ -1,0 +1,26 @@
+extends layout.pug
+block content
+    .col-md-12.center-block
+        center
+            h1.tituloP= title
+            br
+            br
+    div
+        center
+            // formulario de new user de sesion
+            form(method='post', action='/newUserConfirm')
+            input.text2(type='text', name='Name', placeholder='Name', required='')
+            br
+            input.text2(type='text', name='UserName', placeholder='userName', required='')
+            br
+            input.text2(type='email', name='Email', placeholder='Email', required='')
+            br
+            input.text2(type='password', name='Password', placeholder='Password', required='')
+            br
+            input.text2(type='password', name='RepeatPassword', placeholder=' Repeat Password', required='')
+            br
+            input.text2(type='text', name='edad', placeholder=' Edad', required='')
+            br
+            button#send.button(type='submit') Sign Up
+
+

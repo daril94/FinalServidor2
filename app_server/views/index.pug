@@ -1,0 +1,83 @@
+extends layout
+block content
+
+    .col-md-12.center-block
+        center
+            h1.tituloP= title
+            br
+            br
+
+    .container
+        .row
+            .col-md-9
+                .cuadro
+                    br
+                    //.sensor1
+                    br
+                    br
+                    .sensor2#sensor
+                    br
+                    br
+                    //.sensor3
+                p
+                    button(onclick='myMove()') Click Me
+                    #micapa a
+
+
+
+            .col-md-3
+                 div
+                     ul
+                         li
+                             | Sensor 1
+                         li
+                             | Sensor 2
+                         li
+                             | Sensor3
+
+    script.
+        function myMove() {
+        for (var i = 0 ; i <20 ; i++ ){
+
+        if (i<20){
+        mover();}
+
+        }
+        function mover() {
+        var elem = document.getElementById("sensor");
+        var aleatorio = Math.round(Math.random()*255);
+        elem.style.width = aleatorio+'px' ;
+        document.getElementById("micapa").innerHTML += aleatorio+ ','+'\n';
+        }
+        }
+
+
+
+
+    //script.
+        function myMove() {
+        var elem = document.getElementById("sensor");
+        var pos = 0;
+        var id = setInterval(frame, 10);
+        function frame() {
+        var a = [];
+        for (var i = 0 ;i <20; i++ )
+        {
+        var aleatorio = Math.round(Math.random()*255);
+        a[i] = aleatorio;
+        document.getElementById("micapa").innerHTML += aleatorio+ ','+'\n';
+        }
+        if (pos == 350) {
+        clearInterval(id);
+        } else {
+        pos++;
+        elem.style.top = pos + 'px';
+        elem.style.left = pos + 'px';
+        }
+        }
+        }
+
+
+
+
+
